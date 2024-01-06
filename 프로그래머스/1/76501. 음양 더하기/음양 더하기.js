@@ -1,8 +1,9 @@
 function solution(absolutes, signs) {
-    const integer = absolutes.map((_, i) => {
-        if (signs[i]) return absolutes[i]
-        else return absolutes[i] * -1
+    let answer = 0; 
+    const integer = absolutes.map((v, i) => {
+        if (signs[i]) answer += v
+        else answer += v * -1
     });
     
-    return integer.reduce((acc, cur) => acc + cur, 0);
+    return answer;
 }
