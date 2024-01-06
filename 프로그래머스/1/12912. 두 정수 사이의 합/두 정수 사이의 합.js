@@ -2,12 +2,8 @@ function solution(a, b) {
     if (a === b) return a; 
     
     const sum = a + b;
-    const difference = (Math.abs(a - b));
-    const count = parseInt(difference / 2);
+    const difference = (Math.abs(a - b) + 1);
+    const count = difference / 2;
     
-    if (difference % 2 === 0) {
-        return sum * count + sum / 2;
-    } else if (difference % 2 !== 0) {
-        return sum * (count + 1);
-    }
+    return sum * count;
 }
